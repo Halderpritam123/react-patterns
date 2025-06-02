@@ -1,0 +1,23 @@
++-----------------------+
+| <<interface>> Command  |  <-------------------------+
++-----------------------+                            |
+| + execute(state): int  |                            |
+| + undo(state): int     |                            |
++-----------------------+                            |
+          ^                                         uses
+          |                                         |
++------------------------+           +---------------------------------+
+| IncrementCommand       |           | FunctionalCommandCounter (React)|
++------------------------+           +---------------------------------+
+|                        |           | - count: int                    |
+| + execute(state): int   |           | - history: List<Command>        |
+| + undo(state): int      |           | - redoStack: List<Command>      |
++------------------------+           +---------------------------------+
+                                     | + executeCommand(cmd: Command)  |
++------------------------+           | + undo()                       |
+| DecrementCommand       |           | + redo()                       |
++------------------------+           +---------------------------------+
+|                        |
+| + execute(state): int   |
+| + undo(state): int      |
++------------------------+
