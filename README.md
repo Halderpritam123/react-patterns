@@ -104,3 +104,39 @@ It's a lazy loading strategy that delays loading until the user is likely to nee
 Prefetching means loading resources (like JavaScript, CSS, or routes) before the user actually needs them, in the background and without blocking the current experience.
 
 This helps to make the app feel blazing fast when the user finally clicks or navigates to something, because the assets are already cached!
+
+8. Preload:
+
+Preload is a browser hint used to load important resources early, before the browser discovers them naturally. It is especially useful for fonts, hero images, and critical JS/CSS, helping improve performance metrics like LCP (Largest Contentful Paint).
+
+9. PRPL:
+
+PRPL is a web performance pattern designed by Google to optimize the delivery of web apps, especially on mobile. It improves loading speed, interactivity, and perceived performance.
+
+| Letter | Meaning                        | Description                                                               |
+| ------ | ------------------------------ | ------------------------------------------------------------------------- |
+| **P**  | **Push** critical resources    | Use HTTP/2 Push (or preload) to deliver important assets early            |
+| **R**  | **Render** initial route ASAP  | Show the initial view as quickly as possible (e.g., home screen)          |
+| **P**  | **Pre-cache** remaining routes | Cache other assets and views for offline or faster future navigation      |
+| **L**  | **Lazy-load** other routes     | Load remaining parts of the app only when the user needs them (on demand) |
+
+10. Optimizing Loading of Third-Party Scripts (e.g., Google Analytics, Chat Widgets, Ads, etc.):
+
+Third-party scripts can block rendering, slow down load time, and hurt performance if not optimized properly. Here’s how to handle them efficiently.
+
+<!-- Loads in parallel, executes ASAP (not in order) -->
+<script src="https://example.com/analytics.js" async></script>
+
+<!-- Loads in parallel, executes after HTML parsing (in order) -->
+<script src="https://example.com/chat.js" defer></script>
+
+11.  Tree Shaking:
+Tree Shaking is a technique used in modern JavaScript bundlers (like Webpack, Vite, Rollup) to remove unused (dead) code from your final JavaScript bundle.
+
+It’s called "tree shaking" because it metaphorically shakes the tree (your codebase) and removes the "dead leaves" (unused exports).
+
+when we build any app for production tree shaking works there.
+
+12. List Virtualization:
+
+List Virtualization (also called windowing) is a performance optimization technique used to efficiently render large lists or tables by only rendering the items visible in the viewport (plus a small buffer), instead of rendering the entire list at once.
