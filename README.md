@@ -74,3 +74,10 @@ Cons: Some platform limitations.
 
 
 Performance Patterns:
+Bundle Splitting:
+
+Bundle Splitting (also known as code splitting) is a frontend optimization technique where your JavaScript code is divided into smaller chunks (bundles), so the browser can load only what's needed instead of everything upfront.
+
+Compressing JavaScript(build mode):
+Compressing JavaScript (also called minification) is the process of reducing the size of your JS files by removing unnecessary characters — without changing how the code works.
+
