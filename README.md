@@ -178,3 +178,52 @@ Container Component
 A Render Props Pattern is a technique for sharing code between React components using a function as a prop to determine what to render.
 
 Instead of hardcoding the UI inside a reusable component, you pass a function (render prop) that gets access to internal logic (like state), and returns JSX.
+
+Rendering Patterns:
+
+1. Client-side Rendering (CSR):
+
+Client-side rendering is when a web application loads a minimal HTML page and then uses JavaScript (usually React) to render and control the entire user interface in the browser.
+
+2. Incremental Static Generation (ISR):
+
+Incremental Static Generation is a hybrid rendering method (mainly in Next.js) that allows pages to be statically generated at build time and then updated after deployment, either on-demand or in the background.
+
+3. Progressive Hydration:
+
+Progressive Hydration is a technique where parts of a web page (usually static HTML) are incrementally made interactive by hydrating components one at a time, instead of hydrating the entire app immediately.
+
+use lazy loading and Suspense is the example in react
+
+4.  Selective Hydration:
+
+Selective Hydration is a performance optimization technique in React (especially in React 18+) where only specific parts of the page are hydrated immediately, and others are deferred until needed (e.g. when they become visible or interactive).
+
+// main.jsx
+import React from 'react';
+import { hydrateRoot } from 'react-dom/client';
+import App from './App';
+
+hydrateRoot(document.getElementById('root'), <App />);
+
+
+<Suspense fallback={<Skeleton />}>
+  <Comments />  {/* React hydrates this only when it's visible or needed */}
+</Suspense>
+
+
+5.  React Server Components (RSC):
+
+React Server Components (RSC) allow you to render components on the server and send only the final result (HTML + minimal data) to the client — without bundling JS for those components.
+
+6. Static Rendering in React:
+
+Static Rendering (aka Static Site Generation - SSG) means your React app is pre-rendered at build time into static HTML/CSS/JS files. No server is involved to render content on request — it's all done ahead of time.
+
+7.  Streaming Server-Side Rendering (Streaming SSR) in React:
+
+Streaming SSR allows you to send parts of your HTML to the browser as soon as they're ready, instead of waiting for the full page to render on the server. It improves Time to First Byte (TTFB) and perceived performance.
+
+8. Server-Side Rendering (SSR) in React :
+
+Server-Side Rendering (SSR) means the HTML of your React app is rendered on the server, sent to the browser, and then hydrated on the client.
