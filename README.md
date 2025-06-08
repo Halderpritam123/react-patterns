@@ -153,3 +153,19 @@ A design pattern where multiple components work together as a single unit, typic
 A Higher-Order Component (HOC) is a function that takes a component and returns a new component with enhanced behavior.
 
 It's like a wrapper function that adds extra logic or props without modifying the original component.
+
+3. Hooks Pattern:
+
+The Hooks Pattern is a way to extract and reuse component logic using custom hooks (i.e., functions that use built-in React hooks like useState, useEffect, etc.).
+
+4. Container/Presentational Pattern:
+
+It’s a design pattern that separates UI (presentational) components from logic and data (container) components.
+
+Presentational Component
+→ Focuses purely on how things look (UI).
+→ Receives data and callbacks via props.
+
+Container Component
+→ Focuses on how things work (logic, state, data fetching).
+→ Passes props to presentational component.
