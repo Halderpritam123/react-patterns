@@ -27,4 +27,50 @@ rendering patterns:
 
 Most of the cases try to use these 4 render patterns.
 
+
+✅ 1. Progressive Hydration / Selective Hydration
+Description: Only hydrate (enable interactivity) parts of the page as needed.
+
+Flow: Server-rendered HTML → Hydrate section-by-section.
+
+Use Case: React 18 with Server Components.
+
+Pros: Better performance on large pages.
+
+Cons: Advanced technique.
+
+✅ 2. Streaming Server-Side Rendering
+Description: Send pieces of HTML to the browser in a stream (not all at once).
+
+Flow: Server → Streams chunks of HTML → Browser renders as it arrives.
+
+Use Case: React 18 streaming, frameworks like Remix.
+
+Pros: Fast perceived performance.
+
+Cons: Browser compatibility and complexity.
+
+✅ 3. Islands Architecture
+Description: Static HTML with interactive “islands” of JS.
+
+Flow: HTML → Static shell + hydrated islands.
+
+Use Case: Astro, Fresh (Deno).
+
+Pros: Minimal JS, highly optimized.
+
+Cons: Less common, emerging pattern.
+
+✅ 4. Edge Rendering
+Description: Rendering happens on edge servers (CDN) instead of a centralized server.
+
+Flow: Request → Nearest server → Render → Respond.
+
+Use Case: Next.js with Vercel Edge Functions.
+
+Pros: Ultra-low latency.
+
+Cons: Some platform limitations.
+
+
 Performance Patterns:
