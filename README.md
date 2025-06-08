@@ -140,3 +140,16 @@ when we build any app for production tree shaking works there.
 12. List Virtualization:
 
 List Virtualization (also called windowing) is a performance optimization technique used to efficiently render large lists or tables by only rendering the items visible in the viewport (plus a small buffer), instead of rendering the entire list at once.
+
+REACT PATTERNS:
+1. Compound Component Pattern:
+
+A design pattern where multiple components work together as a single unit, typically sharing implicit state from a parent component. 
+
+(use context api , redux etc)
+
+2. HOC Pattern:
+
+A Higher-Order Component (HOC) is a function that takes a component and returns a new component with enhanced behavior.
+
+It's like a wrapper function that adds extra logic or props without modifying the original component.
