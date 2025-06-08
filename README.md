@@ -1,7 +1,9 @@
 # react-patterns
 
 source:https://www.patterns.dev/vanilla/static-import/
-Javascript patterns:
+
+JavaScript Patterns:
+
 Design patterns:
   1. Command Pattern
   2. Factory Pattern
