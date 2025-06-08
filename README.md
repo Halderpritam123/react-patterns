@@ -74,10 +74,26 @@ Cons: Some platform limitations.
 
 
 Performance Patterns:
-Bundle Splitting:
+1. Bundle Splitting:
 
 Bundle Splitting (also known as code splitting) is a frontend optimization technique where your JavaScript code is divided into smaller chunks (bundles), so the browser can load only what's needed instead of everything upfront.
 
-Compressing JavaScript(build mode):
+2. Compressing JavaScript(build mode):
+
 Compressing JavaScript (also called minification) is the process of reducing the size of your JS files by removing unnecessary characters — without changing how the code works.
+
+3. Import on Interaction:
+
+Import on Interaction is a performance optimization technique where you load a JavaScript module only when the user interacts with the UI — like clicking a button, hovering, or focusing.
+
+It’s a form of lazy loading that happens only in response to user input, not just based on route or initial visibility.
+
+4. Dynamic Import:
+
+Dynamic import is a JavaScript feature that lets you load modules on demand (at runtime) instead of at the top of your file like static imports
+
+5.  Import on Visibility:
+Import on Visibility is a pattern where a component or module is only loaded when it becomes visible in the viewport — for example, when a user scrolls down to it.
+
+It's a lazy loading strategy that delays loading until the user is likely to need the resource — saving bandwidth and speeding up initial page load.
 
