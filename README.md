@@ -97,3 +97,10 @@ Import on Visibility is a pattern where a component or module is only loaded whe
 
 It's a lazy loading strategy that delays loading until the user is likely to need the resource — saving bandwidth and speeding up initial page load.
 
+6. Optimize Your Loading Sequence :
+“Optimizing your loading sequence” means strategically loading resources in a way that minimizes page load time and maximizes perceived performance. It’s about what to load, when to load, and how to load it.
+
+7. Prefetching:
+Prefetching means loading resources (like JavaScript, CSS, or routes) before the user actually needs them, in the background and without blocking the current experience.
+
+This helps to make the app feel blazing fast when the user finally clicks or navigates to something, because the assets are already cached!
