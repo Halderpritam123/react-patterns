@@ -142,6 +142,9 @@ when we build any app for production tree shaking works there.
 List Virtualization (also called windowing) is a performance optimization technique used to efficiently render large lists or tables by only rendering the items visible in the viewport (plus a small buffer), instead of rendering the entire list at once.
 
 REACT PATTERNS:
+
+Design Patterns:
+
 1. Compound Component Pattern:
 
 A design pattern where multiple components work together as a single unit, typically sharing implicit state from a parent component. 
@@ -169,3 +172,9 @@ Presentational Component
 Container Component
 → Focuses on how things work (logic, state, data fetching).
 → Passes props to presentational component.
+
+5. Render Props Pattern:
+
+A Render Props Pattern is a technique for sharing code between React components using a function as a prop to determine what to render.
+
+Instead of hardcoding the UI inside a reusable component, you pass a function (render prop) that gets access to internal logic (like state), and returns JSX.
